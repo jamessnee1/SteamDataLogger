@@ -32,16 +32,16 @@ public class SteamDataLogger {
                 String line = null;
                 while((line = reader.readLine()) != null){
                     String[] lineSplit = line.split("=");
+                    if(lineSplit.length != 2){
+                        System.err.println("Error: Malformed credentials.txt file! Exiting...");
+                        System.exit(1);
+                    }
                     if(lineSplit[0].equals("STEAMAPIKEY")){
                         API_KEY = lineSplit[1];
                     }
                     if(lineSplit[0].equals("STEAMID64")){
                         STEAM_ID = lineSplit[1];
                     }
-                }
-                if(API_KEY == null || STEAM_ID == null){
-                    System.err.println("Error: Malformed Steam API Key or Steam ID! Exiting...");
-                    System.exit(1);
                 }
             }
             catch(IOException e){
