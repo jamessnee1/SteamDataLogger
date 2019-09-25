@@ -86,16 +86,16 @@ public class SteamTest {
 
         GameRecord randomGame = games.get(randomNum);
 
-        Reporter.log("Random game selected:");
-        Reporter.log("Name: " + randomGame.getGameName());
-        Reporter.log("AppID: " + randomGame.getAppId());
-        Reporter.log("Img Icon URL: " + randomGame.getImgIconUrl());
-        Reporter.log("Img Logo URL: " + randomGame.getImgLogoUrl());
+        Reporter.log("Random game selected:", true);
+        Reporter.log("Name: " + randomGame.getGameName(), true);
+        Reporter.log("AppID: " + randomGame.getAppId(), true);
+        Reporter.log("Img Icon URL: " + randomGame.getImgIconUrl(), true);
+        Reporter.log("Img Logo URL: " + randomGame.getImgLogoUrl(), true);
         String message = "Random game selected: \nName: " + randomGame.getGameName() + "\nAppID: " + randomGame.getAppId() + "\n";
         String iconURL = "http://media.steampowered.com/steamcommunity/public/images/apps/" + randomGame.getAppId() + "/" + randomGame.getImgIconUrl() + ".jpg";
         String logoURL = "http://media.steampowered.com/steamcommunity/public/images/apps/" + randomGame.getAppId() + "/" + randomGame.getImgLogoUrl() + ".jpg";
-        Reporter.log("Icon URL: " + iconURL);
-        Reporter.log("Logo URL: " + logoURL);
+        Reporter.log("Icon URL: " + iconURL, true);
+        Reporter.log("Logo URL: " + logoURL, true);
 
 
     }
