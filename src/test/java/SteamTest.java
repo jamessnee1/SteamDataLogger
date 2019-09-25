@@ -1,6 +1,7 @@
 import helper.GameRecord;
 import helper.XMLHelper;
 import io.restassured.response.ValidatableResponse;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -85,17 +86,16 @@ public class SteamTest {
 
         GameRecord randomGame = games.get(randomNum);
 
-        System.out.println("Random game selected:");
-        System.out.println("Name: " + randomGame.getGameName());
-        System.out.println("AppID: " + randomGame.getAppId());
-        System.out.println("Img Icon URL: " + randomGame.getImgIconUrl());
-        System.out.println("Img Logo URL: " + randomGame.getImgLogoUrl());
+        Reporter.log("Random game selected:");
+        Reporter.log("Name: " + randomGame.getGameName());
+        Reporter.log("AppID: " + randomGame.getAppId());
+        Reporter.log("Img Icon URL: " + randomGame.getImgIconUrl());
+        Reporter.log("Img Logo URL: " + randomGame.getImgLogoUrl());
         String message = "Random game selected: \nName: " + randomGame.getGameName() + "\nAppID: " + randomGame.getAppId() + "\n";
         String iconURL = "http://media.steampowered.com/steamcommunity/public/images/apps/" + randomGame.getAppId() + "/" + randomGame.getImgIconUrl() + ".jpg";
         String logoURL = "http://media.steampowered.com/steamcommunity/public/images/apps/" + randomGame.getAppId() + "/" + randomGame.getImgLogoUrl() + ".jpg";
-        System.out.println("Icon URL: " + iconURL);
-        System.out.println("Logo URL: " + logoURL);
-        //JOptionPane.showMessageDialog(null, message);
+        Reporter.log("Icon URL: " + iconURL);
+        Reporter.log("Logo URL: " + logoURL);
 
 
     }
