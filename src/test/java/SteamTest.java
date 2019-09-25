@@ -95,7 +95,7 @@ public class SteamTest {
         String logoURL = "http://media.steampowered.com/steamcommunity/public/images/apps/" + randomGame.getAppId() + "/" + randomGame.getImgLogoUrl() + ".jpg";
         System.out.println("Icon URL: " + iconURL);
         System.out.println("Logo URL: " + logoURL);
-        JOptionPane.showMessageDialog(null, message);
+        //JOptionPane.showMessageDialog(null, message);
 
 
     }
